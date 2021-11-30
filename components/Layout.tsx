@@ -1,15 +1,15 @@
-import React, {  ReactNode } from 'react'
 import styles from '../styles/Layout.module.scss'
+import NavBar from './NavBar'
+import { IAuxProps } from '../interfaces/IAuxProps'
 
-interface AuxProps {
- children: ReactNode
-}
-
-function Layout({ children }: AuxProps) {
+function Layout({ children }: IAuxProps) {
  return (
-  <div className={styles.container}>
-   <main className={styles.main}>{children}</main>
-  </div>
+  <>
+   <NavBar />
+   <div className={styles.container}>
+    <main className={styles.main}>{children}</main>
+   </div>
+  </>
  )
 }
 
